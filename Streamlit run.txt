@@ -1,0 +1,3 @@
+Run from Terminal
+
+py -m streamlit run Streamlit-Visualizations.py --server.port 8502
