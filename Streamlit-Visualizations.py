@@ -5,7 +5,7 @@ import numpy as np
 import math
 
 # Load the data
-df = pd.read_csv('/.world-data-2023 - clean.csv')
+df = pd.read_csv('./world-data-2023 - clean.csv')
 df_clean = df.dropna()
 
 # Add GDP per Capita column
@@ -21,8 +21,7 @@ st.set_page_config(
 col1, col2, col3 = st.columns([1,3,1])
 with col1:
     st.write("")
-    st.write("")
-    st.image('/.world-image-1.jpg', use_column_width = True)
+    st.image('./world-image-1.jpg', use_column_width = True)
 with col2:
     st.write("")
     st.write("")
@@ -31,7 +30,7 @@ with col2:
     st.markdown("""<div style='display: flex; justify-content: center; align-items: center;'><p style='color: black; font-size: 35px; font-weight: bold; text-align: center; width: 100%;'>World Data Dashboard</p></div>""", unsafe_allow_html=True)
 with col3:
     st.write("")
-    st.image('/.data-analysis-1.jpg', use_column_width = True)
+    st.image('./data-analysis-1.jpg', use_column_width = True)
 
 st.write("## Overview")
 st.write("This dashboard visualizes key global metrics for the year 2023, sourced from Kaggle. Through interactive visualizations, explore the relationships between economic prosperity, environmental conservation, and health indicators.")
