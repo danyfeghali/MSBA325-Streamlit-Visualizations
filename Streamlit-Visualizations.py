@@ -93,7 +93,6 @@ col_viz1, col_insight1 = st.columns([3,1])
 with col_viz1:
     st.plotly_chart(fig1, use_container_width=True)
 with col_insight1:
-    st.write("")
     st.write("#### Key Insights")
     st.write("- The USA, Russia, India, and China distinctly stand out as the major contributors to CO2 emissions, overshadowing the vast majority of other nations.")
     st.write("- While forests are essential for carbon sequestration, their presence doesn't necessarily correlate with low CO2 emissions for all countries.")
