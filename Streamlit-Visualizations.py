@@ -79,7 +79,7 @@ fig1.update_layout(height=600, xaxis=dict(title='CO2 Emissions (tons)'), legend=
 
 # Create fig2
 df_clean['Log_GDP_per_Capita'] = df_clean['GDP_per_Capita'].apply(lambda x: math.log(x))
-fig2 = px.scatter(df_clean, x="Birth Rate (per 1000)", y="Life expectancy", color="Log GDP per Capita",
+fig2 = px.scatter(df_clean, x="Birth Rate (per 1000)", y="Life expectancy", color="Log_GDP_per_Capita",
                  color_continuous_scale="sunset", hover_data=df_clean[['Country']])
 fig2.update_layout(height=600, template='gridon', plot_bgcolor='white', paper_bgcolor='white')
 
