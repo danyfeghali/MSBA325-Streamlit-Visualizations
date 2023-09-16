@@ -110,33 +110,6 @@ with col_insight2:
     st.write("- There's a noticeable trend that countries with higher birth rates tend to have lower life expectancies.")
     st.write("- The decrease in GDP per capita with increasing birth rate suggests that wealthier countries tend to have lower birth rates.")
 
-# # Create fig1
-# country_by_land = df_clean.sort_values(by='Land Area (Km2)', ascending=False)
-# fig1 = px.scatter(country_by_land, x="Co2-Emissions (tons)", y="Forested Area (%)",
-#                  size="Land Area (Km2)", color="Country")
-# fig1.update_layout(height=600, title_text='CO2 Emissions vs Forest and Land Area', xaxis=dict(title='CO2 Emissions (tons)'), legend=dict(itemclick='toggleothers'))
-# st.write("## Visualizations")
-# st.write("### CO2 Emissions vs. Forested Area")
-# st.write("This scatter plot visualizes the relationship between CO2 emissions and the percentage of forested area for the selected countries by land area. The size of each point represents the land area of the country.")
-# st.plotly_chart(fig1, use_container_width=True)
-
-# # Create fig2
-# df_clean['Log_GDP_per_Capita'] = df_clean['GDP_per_Capita'].apply(lambda x: math.log(x))
-# fig2 = px.scatter(df_clean, x="Birth Rate (per 1000)", y="Life expectancy", color="Log_GDP_per_Capita",
-#                  color_continuous_scale="sunset", hover_data=df_clean[['Country']])
-# fig2.update_layout(height=600, title='Scatterplot of Birth Rate & Life Expectancy', template='gridon', plot_bgcolor='white', paper_bgcolor='white')
-# st.write("### Birth Rate & Life Expectancy vs. GDP per Capita")
-# st.write("This scatter plot showcases the correlation between birth rates and life expectancy across the selected countries. The color intensity signifies the GDP per capita, providing an economic context to the health indicators.")
-# st.plotly_chart(fig2, use_container_width=True)
-
-# # ... (Key Insights, Methodology, Legend, Conclusion, References as previously detailed)
-
-# st.write("## Key Insights")
-# st.write("- The USA, Russia, India, and China distinctly stand out as the major contributors to CO2 emissions, overshadowing the vast majority of other nations. Their substantial emissions highlight the importance of focusing on these countries when aiming for global emission reductions.")
-# st.write("- While forests are essential for carbon sequestration, their presence doesn't necessarily correlate with low CO2 emissions for all countries. The vertical clustering of many countries suggests that other factors, such as industrial activities and energy sources, play a significant role in determining a country's carbon footprint.")
-# st.write("- There's a noticeable trend that countries with higher birth rates tend to have lower life expectancies. This might be indicative of socio-economic factors, where countries with lower development levels often have both higher birth rates and challenges that impact life expectancy, such as limited healthcare access, malnutrition, and other socio-economic challenges.")
-# st.write("- The decrease in GDP per capita with increasing birth rate suggests that wealthier countries tend to have lower birth rates. This could be attributed to factors like better education, more career opportunities, and improved access to contraception. In wealthier societies, there's often a shift in priorities, with families choosing to have fewer children and invest more in their upbringing.")
-
 st.write("## Glossary")
 st.write("- **GDP per Capita**: The total economic output of a country divided by its population. It represents the average economic output per person if a country's total production is distributed evenly.")
 st.write("- **CO2 Emissions**: The total carbon dioxide emissions of a country in tons.")
