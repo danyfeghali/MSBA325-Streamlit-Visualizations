@@ -11,6 +11,12 @@ import math
 # # Add GDP per Capita column
 # df_clean['GDP_per_Capita'] = df_clean['GDP ($)'] / df_clean['Population']
 
+# Set page config
+st.set_page_config(
+    page_title="Interactive Visualizations",
+    layout="wide"
+)
+
 @st.cache_data
 def load_data():
     df = pd.read_csv('./world-data-2023 - clean.csv')
@@ -25,12 +31,6 @@ def clean_data(df):
 # Load and clean the data
 df = load_data()
 df_clean = clean_data(df)
-
-# Set page config
-st.set_page_config(
-    page_title="Interactive Visualizations",
-    layout="wide"
-)
 
 # Title
 col1, col2, col3 = st.columns([1,3,1])
