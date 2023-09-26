@@ -4,24 +4,19 @@ import plotly.express as px
 import numpy as np
 import math
 
-# # Load the data
-# df = pd.read_csv('./world-data-2023 - clean.csv')
-# df_clean = df.dropna()
-
-# # Add GDP per Capita column
-# df_clean['GDP_per_Capita'] = df_clean['GDP ($)'] / df_clean['Population']
-
 # Set page config
 st.set_page_config(
     page_title="Interactive Visualizations",
     layout="wide"
 )
 
+# Load the data
 @st.cache_data
 def load_data():
     df = pd.read_csv('./world-data-2023 - clean.csv')
     return df
 
+# Clean the data and add GDP per Capita column
 @st.cache_data
 def clean_data(df):
     df_clean = df.dropna()
