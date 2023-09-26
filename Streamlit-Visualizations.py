@@ -11,12 +11,12 @@ import math
 # # Add GDP per Capita column
 # df_clean['GDP_per_Capita'] = df_clean['GDP ($)'] / df_clean['Population']
 
-@st.cache
+@st.cache_data
 def load_data():
     df = pd.read_csv('./world-data-2023 - clean.csv')
     return df
 
-@st.cache
+@st.cache_data
 def clean_data(df):
     df_clean = df.dropna()
     df_clean['GDP_per_Capita'] = df_clean['GDP ($)'] / df_clean['Population']
